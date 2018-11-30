@@ -1,0 +1,77 @@
+---
+title: "WSR Hour of code Challenge"
+author: "Klinkenberg"
+output: html_document
+---
+
+<iframe width="280" height="157" style="float:right;" src="https://www.youtube.com/embed/FC5FbmsH4fw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Between 3-9 dec, ten percent of students around the world will celebrate Computer Science Education Week by doing an [Hour of Code](https://hourofcode.com/nl) at their school. It’s an opportunity for every student to learn how the technology around us works.
+
+
+
+### Join this weeks WSR hour of code challenge 
+
+just for the fun of it!
+
+Let's do this. I challenge you to do this in one hour.
+
+We have been talking about validity and reliability. Try to code the image below and make it so that you can modify the amount of [precision and accuracy](https://en.wikipedia.org/wiki/Accuracy_and_precision) You don't have to animate it. 
+
+```{r, echo=FALSE, fig.show='animate', ffmpeg.format='gif', dev='jpeg', interval=.2, message=FALSE, warning=FALSE, fig.height=2}
+# target practice
+# install.packages("plotrix")
+library("plotrix")
+
+for(i in 1:30) {
+
+par(mar = c(0,0,0,0))  
+  
+plot(-4:4,-4:4,
+     type = "n",
+     xlab = "",
+     ylab = "",
+     main = "",
+     xaxt = "n", 
+     yaxt = "n")
+
+# Draw target
+draw.circle(0,0, 3.5, border= "black")
+draw.circle(0,0, 2.5, border= "blue",
+                      col   = "blue")
+draw.circle(0,0, 1.5, border= "red", 
+                      col   = "red")
+draw.circle(0,0,  .5, border= "yellow", 
+                      col   = "yellow")
+
+# shoot
+n           = 10  # how many times to shoot
+imprecision = runif(1,0,1)  # how imprecise do we shoot
+inaccuracy  = runif(1,0,1)  # how inacurate do we shoot
+
+x = rnorm(n,0,imprecision) +
+    rnorm(1,0,inaccuracy)
+y = rnorm(n,0,imprecision) +
+    rnorm(1,0,inaccuracy)
+
+lines(x,y, type="p", col="black", lwd=4)
+
+}
+```
+
+Now turn up [Can't Hold Us (feat. Ray Dalton)](https://open.spotify.com/track/31qgVdvSqTQ7unwQQngycB?si=YonS10zVRsKRkcNcHgOD3A) and make it happen.
+
+Here are some usefull packages and functions you could use.
+
+```{r, eval=FALSE}
+# Package plotrix for making nice circles
+install.packages("plotrix")
+library("plotrix")
+draw.circle()
+
+# Base R
+rnorm()
+plot()
+lines()
+```
+
