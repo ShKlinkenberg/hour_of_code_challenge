@@ -8,15 +8,13 @@ output: html_document
 
 Between 3-9 dec, ten percent of students around the world will celebrate Computer Science Education Week by doing an [Hour of Code](https://hourofcode.com/nl) at their school. It’s an opportunity for every student to learn how the technology around us works.
 
-
-
 ### Join this weeks WSR hour of code challenge 
 
 just for the fun of it!
 
 Let's do this. I challenge you to do this in one hour.
 
-We have been talking about validity and reliability. Try to code the image below and make it so that you can modify the amount of [precision and accuracy](https://en.wikipedia.org/wiki/Accuracy_and_precision) You don't have to animate it. 
+We have been talking about validity and reliability. Try to code the image below and make it so that you can modify the amount of [precision and accuracy](https://en.wikipedia.org/wiki/Accuracy_and_precision) You don't have to animate it. Be creative!
 
 ```{r, echo=FALSE, fig.show='animate', ffmpeg.format='gif', dev='jpeg', interval=.2, message=FALSE, warning=FALSE, fig.height=2}
 # target practice
@@ -75,3 +73,7 @@ plot()
 lines()
 ```
 
+When your done, let us know what you have created. 
+
+Have Fun,
+<br>Sharon & Roeland
